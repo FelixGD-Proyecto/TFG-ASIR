@@ -1,0 +1,83 @@
+# Almacenamiento para código web
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: web-pv
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /home/pc/proyecto-k8s/web
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-pvc
+  namespace: mi-app
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 2Gi
+---
+# Web Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: mi-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: webdevops/php-apache:8.2-alpine
+        ports:
+        - containerPort: 80
+        env:
+        - name: WEB_DOCUMENT_ROOT
+          value: "/app"
+        - name: PHP_DATE_TIMEZONE
+          value: "Europe/Madrid"
+        - name: PHP_DISPLAY_ERRORS
+          value: "1"
+        - name: PHP_MEMORY_LIMIT
+          value: "512M"
+        - name: PHP_MAX_EXECUTION_TIME
+          value: "300"
+        - name: PHP_POST_MAX_SIZE
+          value: "50M"
+        - name: PHP_UPLOAD_MAX_FILESIZE
+          value: "50M"
+        volumeMounts:
+        - name: web-files
+          mountPath: /app
+      volumes:
+      - name: web-files
+        persistentVolumeClaim:
+          claimName: web-pvc
+---
+# Web Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+  namespace: mi-app
+spec:
+  selector:
+    app: web
+  ports:
+  - port: 8080
+    targetPort: 80
+    nodePort: 30080
+  type: NodePort
