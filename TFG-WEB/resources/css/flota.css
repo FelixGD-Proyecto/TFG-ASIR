@@ -1,0 +1,92 @@
+.categoria {
+  background-color: #e5e5e5;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.categoria ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.categoria li {
+  margin: 0;
+}
+
+.categoria a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #2d3748;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.categoria li:last-child a {
+  background-color: #b91c1c;
+  position: relative;
+}
+
+/* Iconos de bandera para "Pista" */
+.categoria li:last-child a::after {
+  content: "🏁";
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.categoria a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.categoria li:not(:last-child) a:hover {
+  background-color: #4a5568; 
+}
+
+.categoria li:last-child a:hover {
+  background-color: #dc2626;
+}
+
+/*__________________________________________ DISEÑO RESPONSIVO __________________________________________*/
+@media (max-width: 768px) {
+  .categoria {
+    padding: 25px 15px;
+  }
+  
+  .categoria ul {
+    gap: 10px;
+  }
+  
+  .categoria a {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoria ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .categoria a {
+    width: 180px;
+    text-align: center;
+  }
+}

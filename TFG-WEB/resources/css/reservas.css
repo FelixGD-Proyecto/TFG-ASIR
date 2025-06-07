@@ -1,0 +1,116 @@
+/*  para el formulario de reservas dentro del main */
+.formulario-reservas {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-reservas h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.formulario-reservas .form-group {
+  margin-bottom: 15px;
+}
+
+.formulario-reservas label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formulario-reservas input,
+.formulario-reservas select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.formulario-reservas input:focus,
+.formulario-reservas select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.formulario-reservas button {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.formulario-reservas button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  transition: all 0.2s;
+}
+
+.formulario-reservas .mensaje {
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.formulario-reservas .exito {
+  background: #d4edda;
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.formulario-reservas .error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+.formulario-reservas .precio {
+  background: #e9ecef;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #495057;
+  border: 2px solid #dee2e6;
+}
+
+.formulario-reservas .precio span {
+  color: #28a745;
+  font-size: 22px;
+}
+
+/*__________________________________________ DISEÑO RESPONSIVO __________________________________________*/
+@media (max-width: 768px) {
+  .formulario-reservas {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .formulario-reservas h1 {
+    font-size: 24px;
+  }
+
+  .formulario-reservas input,
+  .formulario-reservas select,
+  .formulario-reservas button {
+    font-size: 16px;
+  }
+}

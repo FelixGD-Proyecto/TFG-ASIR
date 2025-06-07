@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+  # Base de datos MariaDB
+  database:
+    image: mariadb:10.9
+    container_name: webdevops_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 4444
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: felix
+      MYSQL_PASSWORD: 4444
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - /home/web/APP-WEB/volumenes/mysql-data:/var/lib/mysql
+      - /home/web/APP-WEB/volumenes/sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    networks:
+      - lamp_network
+  # Servidor web PHP+Apache
+  web:
+    image: webdevops/php-apache:8.2-alpine
+    container_name: webdevops_web
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "8080:80"
+    volumes:
+      - /home/web/APP-WEB/web:/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/app
+      - PHP_DATE_TIMEZONE=Europe/Madrid
+      - PHP_DISPLAY_ERRORS=1
+      - PHP_MEMORY_LIMIT=512M
+      - PHP_MAX_EXECUTION_TIME=300
+      - PHP_POST_MAX_SIZE=50M
+      - PHP_UPLOAD_MAX_FILESIZE=50M
+    networks:
+      - lamp_network
+  # phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: webdevops_phpmyadmin
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_USER: felix
+      PMA_PASSWORD: 4444
+      MYSQL_ROOT_PASSWORD: 4444
+    networks:
+      - lamp_network
+networks:
+  lamp_network:
+    driver: bridge

@@ -1,0 +1,197 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #151a38;
+  border-radius: 2px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  margin-bottom: 4rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 3px solid #fff;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.car-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+.car-image {
+  flex: 1;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.car-info {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.car-description {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.car-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reserve-btn {
+  background: linear-gradient(45deg, #87ceeb, #b0e0e6);
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reserve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+  background: linear-gradient(45deg, #b0e0e6, #87ceeb);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a5298;
+  text-align: center;
+}
+
+/* Imágenes específicas de cada coche */
+/* Super */
+.car1 {
+  background-image: url("../img/flota/super-deportivos/audi\ r8\ v10\ 2024.jpg");
+}
+.car2 {
+  background-image: url("../img/flota/super-deportivos/ford\ gt\ 2005.jpg");
+}
+.car3 {
+  background-image: url("../img/flota/super-deportivos/Chevrolet\ Corvette\ Z06\ 2024.webp");
+}
+
+/* Deport */
+.car4 {
+  background-image: url("../img/flota/deportivos/nissan\ GT-R\ 2017.jpg");
+}
+
+.car5 {
+  background-image: url("../img/flota/deportivos/bmw\ m5\ competition\ 2025.jpg");
+}
+
+/* Moto */
+.car6 {
+  background-image: url("../img/flota/motocicletas/kawasaki\ ninja\ h2r\ 2024.jpg");
+}
+.car7 {
+  background-image: url("../img/flota/motocicletas/yamaha\ r1\ 2022.webp");
+}
+.car8 {
+  background-image: url("../img/flota/motocicletas/honda\ africa\ twin\ 2022.jpg");
+}
+
+/* Todo */
+.car9 {
+  background-image: url("../img/flota/todoterrenos/ford\ f-150\ raptor\ 2024.jpg");
+}
+.car10 {
+  background-image: url("../img/flota/todoterrenos/jeep\ wrangler\ rubicon\ 2019.jpg");
+}
+.car11 {
+  background-image: url("../img/flota/todoterrenos/Mercedes\ AMG\ G\ 63\ 2022.jpg");
+}
+
+/* Muscle */
+.car12 {
+  background-image: url("../img/flota/muscle-cars/dodge\ challenger\ 2020.jpg");
+}
+.car13 {
+  background-image: url("../img/flota/muscle-cars/ford\ mustang\ 2025.jpg");
+}
+.car14 {
+  background-image: url("../img/flota/muscle-cars/hennessey\ chevrolet\ camaro\ zl1\ 2019.jpg");
+}
+
+/* Pista */
+.car15 {
+  background-image: url("../img/flota/pista/pista\ aston\ martin\ valhalla\ 2025.jpg");
+}
+.car16 {
+  background-image: url("../img/flota/pista/pista\ mercedes\ amg\ gt\ black\ series\ 2025.jpeg");
+}
+.car17 {
+  background-image: url("../img/flota/pista/pista\ porche\ 911\ GT2\ RS\ 2022.jpg");
+}
+
+/*__________________________________________ DISEÑO RESPONSIVO __________________________________________*/
+@media (max-width: 768px) {
+  .cars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .car-card {
+    flex-direction: column;
+  }
+
+  .car-image {
+    height: 150px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./resources/css/general.css" />
+  <link rel="stylesheet" href="./resources/css/flota.css" />
+  <link rel="stylesheet" href="./resources/css/flota-categoria.css" />
+  <title>GDRM Muscle cars</title>
+</head>
+
+<body>
+  <!--__________________________________________ C A B E C E R A __________________________________________-->
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <h1 class="logo">ALQUILER DE VEHICULOS</h1>
+      </div>
+      <nav class="nav-alto">
+        <ul>
+          <li><a href="#" data-enlaces="inicio">INICIO</a></li>
+          <li><a href="#" data-enlaces="tarifas">TARIFAS</a></li>
+          <li><a href="#" data-enlaces="contacto">CONTACTO</a></li>
+          <li><a href="#" data-enlaces="snosotros">SOBRE NOSOTROS</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nlogo">
+      <img src="./resources/img/header/logo-cabecera.jpg" alt="" />
+    </div>
+
+    <div class="header-bottom">
+      <nav class="nav-bajo">
+        <ul>
+          <li>
+            <a href="#" data-enlaces="reservas" class="btn-reservas">RESERVAS</a>
+          </li>
+          <li>
+            <a href="#" data-enlaces="flota" class="btn-flota">FLOTA</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--__________________________________________ C U E R P O __________________________________________-->
+  <main>
+    <section class="libert">
+      <h2>CONOCE NUESTRA FLOTA</h2>
+      <div class="categoria">
+        <ul>
+          <li>
+            <a href="#" class="categoria" data-enlaces="super">Super Deportivos</a>
+          </li>
+          <li>
+            <a href="#" class="categoria" data-enlaces="depor">Deportivos</a>
+          </li>
+          <li>
+            <a href="#" class="categoria" data-enlaces="moto">Motocicletas</a>
+          </li>
+          <li>
+            <a href="#" class="categoria" data-enlaces="todo">Todoterreno</a>
+          </li>
+          <li>
+            <a href="#" class="categoria" data-enlaces="muscle">Muscle cars</a>
+          </li>
+          <li>
+            <a href="#" class="categoria" data-enlaces="pista">Pista</a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="libert-texto">
+        Alquila tu coche ideal en minutos <br />
+        Rápido, fácil y sin complicaciones
+      </p>
+    </section>
+
+    <div class="container">
+      <header class="header">
+        <h1>Muscle cars</h1>
+      </header>
+
+      <div class="cars-grid">
+        <div class="car-card">
+          <div class="car-image car12"></div>
+          <div class="car-info">
+            <h3 class="car-name">Dodge Challenger 2020</h3>
+            <p class="car-description">
+              El músculo americano por definición. Motor V8, estética intimidante y un rugido que impone respeto.
+            </p>
+            <div class="car-actions">
+              <button class="reserve-btn" onclick="reservar('Dodge Challenger 2020')">RESERVA</button>
+              <div class="price">50 €/hora</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image car13"></div>
+          <div class="car-info">
+            <h3 class="car-name">Ford Mustang 2025</h3>
+            <p class="car-description">
+              Evolución de una leyenda. El nuevo Mustang mezcla tradición, tecnología y pura emoción al volante.
+            </p>
+            <div class="car-actions">
+              <button class="reserve-btn" onclick="reservar('Ford Mustang 2025')">RESERVA</button>
+              <div class="price">55 €/hora</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image car14"></div>
+          <div class="car-info">
+            <h3 class="car-name">Hennessey Chevrolet Camaro ZL1 2019</h3>
+            <p class="car-description">
+              Una bestia sobrealimentada con firma Hennessey. Potencia salvaje y diseño agresivo para sensaciones
+              extremas.
+            </p>
+            <div class="car-actions">
+              <button class="reserve-btn" onclick="reservar('Hennessey Chevrolet Camaro ZL1 2019')">RESERVA</button>
+              <div class="price">60 €/hora</div>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <!--__________________________________________ P I E __________________________________________-->
+  <footer>
+    <section class="zona-redes">
+      <ul>
+        <li class="redes">
+          <a href="#" data-enlaces="facebook">Facebook</a>
+        </li>
+        <li class="redes">
+          <a href="#" data-enlaces="instagram">Instagram</a>
+        </li>
+        <li class="redes">
+          <a href="#" data-enlaces="twitter">X/Twitter</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="zona-contacto">
+      <ul>
+        <li>
+          <a href="#" data-enlaces="contacto">📞 Teléfono: +34 900 000 000</a>
+        </li>
+        <li>
+          <a href="#" data-enlaces="contacto">📍 Dirección: Calle Ejemplo, 123, Madrid</a>
+        </li>
+        <li>
+          <a href="#" data-enlaces="contacto">📧 Email: info@gdrmotion.com</a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="zona-links">
+      <ul>
+        <li><a href="#" data-enlaces="inicio">Inicio</a></li>
+        <li>
+          <a href="#" data-enlaces="tycondiciones">Términos y Condiciones</a>
+        </li>
+        <li>
+          <a href="#" data-enlaces="pdprivacidad">Política de Privacidad</a>
+        </li>
+        <li><a href="#" data-enlaces="contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="zona-copy">
+      <p class="copy">Copyright © 2024 Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="./resources/js/flota-categoria.js"></script>
+  <script src="./resources/js/enlaces.js"></script></body>
+
+</html>
+<!--                    Código elaborado por Félix Galán De los Reyes                      -->

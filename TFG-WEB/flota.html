@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/css/general.css" />
+    <link rel="stylesheet" href="./resources/css/flota.css" />
+    <link rel="stylesheet" href="./resources/css/carrusel.css" />
+    <title>WEB GDR MOTION</title>
+  </head>
+
+  <body>
+    <!--__________________________________________ C A B E C E R A __________________________________________-->
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <h1 class="logo">ALQUILER DE VEHICULOS</h1>
+        </div>
+        <nav class="nav-alto">
+          <ul>
+            <li><a href="#" data-enlaces="inicio">INICIO</a></li>
+            <li><a href="#" data-enlaces="tarifas">TARIFAS</a></li>
+            <li><a href="#" data-enlaces="contacto">CONTACTO</a></li>
+            <li><a href="#" data-enlaces="snosotros">SOBRE NOSOTROS</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nlogo">
+        <img src="./resources/img/header/logo-cabecera.jpg" alt="" />
+      </div>
+
+      <div class="header-bottom">
+        <nav class="nav-bajo">
+          <ul>
+            <li>
+              <a href="#" data-enlaces="reservas" class="btn-reservas"
+                >RESERVAS</a
+              >
+            </li>
+            <li>
+              <a href="#" data-enlaces="flota" class="btn-flota">FLOTA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--__________________________________________ C U E R P O __________________________________________-->
+    <main>
+      <section class="libert">
+        <h2>CONOCE NUESTRA FLOTA</h2>
+        <div class="categoria">
+          <ul>
+            <li>
+              <a href="#" class="categoria" data-enlaces="super"
+                >Super Deportivos</a
+              >
+            </li>
+            <li>
+              <a href="#" class="categoria" data-enlaces="depor">Deportivos</a>
+            </li>
+            <li>
+              <a href="#" class="categoria" data-enlaces="moto">Motocicletas</a>
+            </li>
+            <li>
+              <a href="#" class="categoria" data-enlaces="todo">Todoterreno</a>
+            </li>
+            <li>
+              <a href="#" class="categoria" data-enlaces="muscle"
+                >Muscle cars</a
+              >
+            </li>
+            <li>
+              <a href="#" class="categoria" data-enlaces="pista">Pista</a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="libert-texto">
+          Alquila tu coche ideal en minutos <br />
+          Rápido, fácil y sin complicaciones
+        </p>
+      </section>
+
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide active">
+              <img
+                src="./resources/img/flota/deportivos/bmw m5 competition 2025.jpg"
+                alt="BMW M5 Competition 2025"
+              />
+              <div class="slide-overlay">
+                <div class="slide-title">BMW M5 Competition 2025</div>
+                <div class="slide-description">
+                  Berlina de lujo con alma de bestia. Potencia brutal y
+                  tecnología alemana en perfecta armonía.
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="./resources/img/home/ford-ranger-eu-0332_1_ranger-16x9-2160x1215-fc.jpg.renditions.original.jpg"
+                alt="Ford F-150 Raptor"
+              />
+              <div class="slide-overlay">
+                <div class="slide-title">Ford F-150 Raptor 2024</div>
+                <div class="slide-description">
+                  La pick-up todoterreno definitiva. Suspensión reforzada para
+                  devorar cualquier camino.
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="./resources/img/flota/super-deportivos/Chevrolet Corvette Z06 2024.webp"
+                alt="Chevrolet Corvette Z06"
+              />
+              <div class="slide-overlay">
+                <div class="slide-title">Chevrolet Corvette Z06 2024</div>
+                <div class="slide-description">
+                  Un muscle car con alma de superdeportivo. Potencia americana
+                  con ingeniería de pista.
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="./resources/img/flota/motocicletas/kawasaki ninja h2r 2024.jpg"
+                alt="Kawasaki Ninja H2R"
+              />
+              <div class="slide-overlay">
+                <div class="slide-title">Kawasaki Ninja H2R 2024</div>
+                <div class="slide-description">
+                  Pura locura sobre ruedas. Con más de 300 CV para los más
+                  valientes en circuito cerrado.
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="./resources/img/flota/muscle-cars/ford mustang 2025.jpg"
+                alt="Ford Mustang 2025"
+              />
+              <div class="slide-overlay">
+                <div class="slide-title">Ford Mustang 2025</div>
+                <div class="slide-description">
+                  Evolución de una leyenda. El nuevo Mustang mezcla tradición y
+                  pura emoción al volante.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-nav prev" onclick="previousSlide()">‹</button>
+          <button class="carousel-nav next" onclick="nextSlide()">›</button>
+
+          <div class="carousel-indicators" id="indicators"></div>
+
+          <div class="carousel-progress" id="progress"></div>
+        </div>
+      </div>
+    </main>
+
+    <!--__________________________________________ P I E __________________________________________-->
+    <footer>
+      <section class="zona-redes">
+        <ul>
+          <li class="redes">
+            <a href="#" data-enlaces="facebook">Facebook</a>
+          </li>
+          <li class="redes">
+            <a href="#" data-enlaces="instagram">Instagram</a>
+          </li>
+          <li class="redes">
+            <a href="#" data-enlaces="twitter">X/Twitter</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="zona-contacto">
+        <ul>
+          <li>
+            <a href="#" data-enlaces="contacto">📞 Teléfono: +34 900 000 000</a>
+          </li>
+          <li>
+            <a href="#" data-enlaces="contacto"
+              >📍 Dirección: Calle Ejemplo, 123, Madrid</a
+            >
+          </li>
+          <li>
+            <a href="#" data-enlaces="contacto">📧 Email: info@gdrmotion.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="zona-links">
+        <ul>
+          <li><a href="#" data-enlaces="inicio">Inicio</a></li>
+          <li>
+            <a href="#" data-enlaces="tycondiciones">Términos y Condiciones</a>
+          </li>
+          <li>
+            <a href="#" data-enlaces="pdprivacidad">Política de Privacidad</a>
+          </li>
+          <li><a href="#" data-enlaces="contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="zona-copy">
+        <p class="copy">Copyright © 2024 Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS - ORDEN IMPORTANTE -->
+
+    <script src="./resources/js/carrusel.js"></script>
+    <script src="./resources/js/enlaces.js"></script>
+  </body>
+</html>
+<!--                    Código elaborado por Félix Galán De los Reyes                      -->

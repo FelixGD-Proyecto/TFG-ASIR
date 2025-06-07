@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/css/general.css" />
+    <link rel="stylesheet" href="./resources/css/calculador.css" />
+    <link rel="stylesheet" href="./resources/css/campos-fecha-hora.css" />
+    <title>WEB GDR MOTION - Calculadora</title>
+  </head>
+
+  <body>
+    <!-- CABECERA REUTILIZABLE -->
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <h1 class="logo">ALQUILER DE VEHICULOS</h1>
+        </div>
+        <nav class="nav-alto">
+          <ul>
+            <li><a href="#" data-enlaces="inicio">INICIO</a></li>
+            <li><a href="#" data-enlaces="tarifas">TARIFAS</a></li>
+            <li><a href="#" data-enlaces="contacto">CONTACTO</a></li>
+            <li><a href="#" data-enlaces="snosotros">SOBRE NOSOTROS</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nlogo">
+        <img src="./resources/img/header/logo-cabecera.jpg" alt="" />
+      </div>
+
+      <div class="header-bottom">
+        <nav class="nav-bajo">
+          <ul>
+            <li>
+              <a href="#" data-enlaces="reservas" class="btn-reservas"
+                >RESERVAS</a
+              >
+            </li>
+            <li>
+              <a href="#" data-enlaces="flota" class="btn-flota">FLOTA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <div class="form-section">
+        <h2>Calcula tu precio</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <select id="categoria" name="categoria">
+              <option value="">Selecciona categoría</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <select id="modelo" name="modelo">
+              <option value="">Selecciona modelo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="horas">Horas</label>
+            <input type="number" id="horas" name="horas" min="1" readonly />
+          </div>
+
+          <div class="form-group">
+            <label for="precio-hora">Precio/hora</label>
+            <input type="number" id="precio-hora" name="precio-hora" readonly />
+          </div>
+        </div>
+
+        <div class="date-group">
+          <div class="date-input">
+            <label for="fecha-inicio">Fecha inicio</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio" />
+          </div>
+
+          <div class="date-input">
+            <label for="hora-inicio">Hora inicio</label>
+            <input
+              type="time"
+              id="hora-inicio"
+              name="hora-inicio"
+              value="09:00"
+            />
+          </div>
+
+          <div class="date-input">
+            <label for="fecha-fin">Fecha fin</label>
+            <input type="date" id="fecha-fin" name="fecha-fin" />
+          </div>
+
+          <div class="date-input">
+            <label for="hora-fin">Hora fin</label>
+            <input type="time" id="hora-fin" name="hora-fin" value="18:00" />
+          </div>
+        </div>
+
+        <button class="calculate-btn">calcular</button>
+
+        <div class="result-group">
+          <label for="precio-total">Precio Total</label>
+          <input type="text" id="precio-total" name="precio-total" readonly />
+        </div>
+      </div>
+    </main>
+
+    <!-- PIE REUTILIZABLE -->
+    <footer>
+      <section class="zona-redes">
+        <ul>
+          <li class="redes">
+            <a href="#" data-enlaces="facebook">Facebook</a>
+          </li>
+          <li class="redes">
+            <a href="#" data-enlaces="instagram">Instagram</a>
+          </li>
+          <li class="redes">
+            <a href="#" data-enlaces="twitter">X/Twitter</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="zona-contacto">
+        <ul>
+          <li>
+            <a href="#" data-enlaces="contacto">📞 Teléfono: +34 900 000 000</a>
+          </li>
+          <li>
+            <a href="#" data-enlaces="contacto"
+              >📍 Dirección: Calle Ejemplo, 123, Madrid</a
+            >
+          </li>
+          <li>
+            <a href="#" data-enlaces="contacto">📧 Email: info@gdrmotion.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="zona-links">
+        <ul>
+          <li><a href="#" data-enlaces="inicio">Inicio</a></li>
+          <li>
+            <a href="#" data-enlaces="tycondiciones">Términos y Condiciones</a>
+          </li>
+          <li>
+            <a href="#" data-enlaces="pdprivacidad">Política de Privacidad</a>
+          </li>
+          <li><a href="#" data-enlaces="contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="zona-copy">
+        <p class="copy">Copyright © 2024 Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS  -->
+
+    <script src="./resources/js/calculo.js"></script>
+    <script src="./resources/js/enlaces.js"></script>
+    <script>
+      // Inicializar calculadora
+      document.addEventListener("DOMContentLoaded", () => {
+        window.sistemaCalculo = new SistemaCalculoUnificado(false); // false = modo calculadora
+      });
+    </script>
+  </body>
+</html>
