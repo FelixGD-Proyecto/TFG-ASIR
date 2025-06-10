@@ -51,7 +51,7 @@ echo ""
 echo "¡Estructura creada correctamente!"
 echo ""
 echo "📋 Próximos pasos:"
-echo "1. Ejecuta: docker-compose up -d"
+echo "1. Ejecuta: docker compose up -d
 echo "2. Para acceder a la aplicación en: http://localhost:8080"
 echo "3. Para acceder a  phpMyAdmin en: http://localhost:8081"
 echo "   Usuario: felix | Contraseña: 4444"
